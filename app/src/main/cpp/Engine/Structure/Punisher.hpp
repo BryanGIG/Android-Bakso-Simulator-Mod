@@ -1,9 +1,6 @@
 #include "CBaseEntry.hpp"
 
-/*
- * This file is just sample, you can modify this
- */
-class ExampleEntry : public CBaseEntry {
+class Punisher : public CBaseEntry {
 public:
     const char *getAssembly() override;
 
@@ -11,7 +8,7 @@ public:
 
     const char *getClass() override;
 
-    void Initialize() override;
-
     void Hook() override;
+
+    void Initialize() override;
 };

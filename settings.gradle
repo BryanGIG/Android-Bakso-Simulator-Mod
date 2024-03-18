@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Android Native Mod Template"
+rootProject.name = "Android Bakso Simulator Mod"
 include ':app'

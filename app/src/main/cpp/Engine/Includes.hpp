@@ -4,7 +4,7 @@
  * macro definitions
  */
 
-#define getFieldOffset(method) Il2Cpp::GetFieldOffset(getAssembly(), getNamespace(), getClass(), method)
+#define setFieldOffset(var, method) var = Il2Cpp::GetFieldOffset(getAssembly(), getNamespace(), getClass(), method)
 #define getMethodOffset(method, param) (uintptr_t) Il2Cpp::GetMethodOffset(getAssembly(), getNamespace(), getClass(), method, param)
 #define getFieldStaticVal(method, out) Il2Cpp::GetStaticFieldValue(getAssembly(), getNamespace(), getClass(),method,out)
 #define setPointer(func, method, param) func = Il2Cpp::GetMethod<decltype(func)>(getAssembly(), getNamespace(), getClass(), method, param)
@@ -26,9 +26,11 @@
 /*
  * Early class define so it can be used for other classes
  */
-class ExampleEntry;
+class GameManager;
+class Punisher;
 
 /*
  * Include our structure classes
  */
-#include "Structure/ExampleEntry.hpp"
+#include "Structure/GameManager.hpp"
+#include "Structure/Punisher.hpp"

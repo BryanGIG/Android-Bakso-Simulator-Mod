@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.cheat.template'
+    namespace 'com.cheat.baksosimulator'
     compileSdk 34
 
     defaultConfig {
@@ -11,6 +11,11 @@ android {
         targetSdk 34
         versionCode 1
         versionName "1.0"
+        externalNativeBuild {
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+        }
     }
 
     compileOptions {

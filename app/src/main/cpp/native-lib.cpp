@@ -11,6 +11,7 @@ void lib_main() {
             map = KittyMemory::getElfBaseMap("libil2cpp.so");
             sleep(1);
         } while (!map.isValid() && !map.isValidELF());
+        sleep(2);
 
         if (Il2Cpp::Init("libil2cpp.so") == -1) {
             LOGE("Il2Cpp::Init Failed!");
@@ -18,7 +19,8 @@ void lib_main() {
         }
 
         // Initialize the classes
-        ListCBaseEntry::add(std::make_shared<ExampleEntry>());
+        ListCBaseEntry::add(std::make_shared<GameManager>());
+        ListCBaseEntry::add(std::make_shared<Punisher>());
         ListCBaseEntry::Initialize();
     }).detach();
 }
